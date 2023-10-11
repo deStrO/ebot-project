@@ -1,0 +1,114 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "logger",
+    "udp",
+    "http"
+  ],
+  "properties": {
+    "logger": {
+      "$id": "#/properties/logger",
+      "type": "object",
+      "title": "The Logger Schema",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/properties/logger/properties/name",
+          "type": "string",
+          "title": "The Name Schema",
+          "default": "",
+          "examples": [
+            "Logs #1"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "udp": {
+      "$id": "#/properties/udp",
+      "type": "object",
+      "title": "The Udp Schema",
+      "required": [
+        "enabled",
+        "ip",
+        "port"
+      ],
+      "properties": {
+        "enabled": {
+          "$id": "#/properties/udp/properties/enabled",
+          "type": "boolean",
+          "title": "The Enabled Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "ip": {
+          "$id": "#/properties/udp/properties/ip",
+          "type": "string",
+          "title": "The Ip Schema",
+          "default": "",
+          "examples": [
+            "127.0.0.1"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "port": {
+          "$id": "#/properties/udp/properties/port",
+          "type": "integer",
+          "title": "The Port Schema",
+          "default": 0,
+          "examples": [
+            12345
+          ]
+        }
+      }
+    },
+    "http": {
+      "$id": "#/properties/http",
+      "type": "object",
+      "title": "The Http Schema",
+      "required": [
+        "enabled",
+        "ip",
+        "port"
+      ],
+      "properties": {
+        "enabled": {
+          "$id": "#/properties/http/properties/enabled",
+          "type": "boolean",
+          "title": "The Enabled Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "ip": {
+          "$id": "#/properties/http/properties/ip",
+          "type": "string",
+          "title": "The Ip Schema",
+          "default": "",
+          "examples": [
+            "127.0.0.1"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "port": {
+          "$id": "#/properties/http/properties/port",
+          "type": "integer",
+          "title": "The Port Schema",
+          "default": 0,
+          "examples": [
+            12345
+          ]
+        }
+      }
+    }
+  }
+}

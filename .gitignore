@@ -1,0 +1,5 @@
+node_modules/
+.idea/
+logs/
+yarn-error.log
+configs/*.json
